@@ -20,7 +20,7 @@ setup(
     entry_points={
         'console_scripts': ['sqjobs = sqjobs.cli:main']
     },
-    install_requires=[req.strip() for req in open('requirements/base.txt').readlines()],
+    install_requires=[],
     classifiers=[
         'Development Status :: 4 - Beta',
         # 'Development Status :: 5 - Production/Stable',
