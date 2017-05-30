@@ -3,6 +3,11 @@ sqjobs
 
 |Build Status| |Coverage Status|
 
+Origin
+------
+
+This is a fork of the original [sqjobs](https://github.com/igalarzab/sqjobs/)
+
 
 Installation
 ------------
