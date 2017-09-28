@@ -40,7 +40,7 @@ class TestConnectorInterface(object):
             Connector.serialize_job(dummy, dummy, 'job_id', 'args', {})
 
         with pytest.raises(NotImplementedError):
-            Connector.unserialize_job(dummy, dummy, 'demo', 'payload')
+            Connector.unserialize_job(dummy, dummy, 'payload')
 
 
 class SQSMock(object):
@@ -165,7 +165,8 @@ class TestSQSConnector(object):
             '_metadata': {
                 'created_on': datetime(2016, 4, 9, 7, 16, 44, tzinfo=timezone('UTC')),
                 'id': '1',
-                'retries': 0
+                'retries': 0,
+                'queue_name': 'my_queue'
             },
             'args': [1, 'second_arg'],
             'kwargs': {
@@ -176,7 +177,6 @@ class TestSQSConnector(object):
 
         job, args, kwargs = sqs_connector.unserialize_job(
             job_class=Adder,
-            queue_name=QUEUE_NAME,
             payload=payload
         )
 
@@ -211,7 +211,8 @@ class TestSQSConnector(object):
             '_metadata': {
                 'created_on': datetime(2016, 4, 9, 7, 16, 44, tzinfo=timezone('UTC')),
                 'id': '1',
-                'retries': 0
+                'retries': 0,
+                'queue_name': 'my_queue'
             },
             'key': 'value'
         }
