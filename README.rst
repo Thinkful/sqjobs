@@ -48,7 +48,7 @@ Then, you can launch the job creating a new broker.
 Documentation
 -------------
 
-Check out `sqjobs’s documentation`_ for further information.
+Check out `sqjobs's documentation`_ for further information.
 
 .. _sqjobs’s documentation: https://sqjobs.readthedocs.org
 
