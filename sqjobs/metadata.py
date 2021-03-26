@@ -1,4 +1,4 @@
-__uname__ = 'sqjobstf'
+__uname__ = 'sqjobs'
 __long_name__ = 'Simple Queue Jobs TF Fork'
 __version__ = '0.9.0'
 __author__ = 'Saul Diez-Guerra'

@@ -155,7 +155,7 @@ class SQS(Connector):
             aws_queues_enabled = os.environ.get('AWS_SAM_QUEUES','')
             if environment and aws_queues_enabled:
                 # running in the AWS environments
-                name = f'{environment}_{name}'
+                name = f'{environment}-{name}'
             return self.connection.get_queue_by_name(QueueName=name)
         except botocore.exceptions.ClientError:
             return None
