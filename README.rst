@@ -12,11 +12,11 @@ This is a fork of the original [sqjobs](https://github.com/igalarzab/sqjobs/)
 Installation
 ------------
 
-Simply use pip to install the last version of ``sqjobs``
+Simply use pip to install the last version of ``sqjobstf``
 
 ::
 
-    pip install --upgrade sqjobs
+    pip install --upgrade sqjobstf
 
 
 Getting started
@@ -56,3 +56,26 @@ Check out `sqjobs's documentation` for further information.
    :target: https://secure.travis-ci.org/igalarzab/sqjobs
 .. |Coverage Status| image:: https://coveralls.io/repos/igalarzab/sqjobs/badge.png?branch=master
    :target: https://coveralls.io/r/igalarzab/sqjobs?branch=master
+
+
+Releasing a new version
+-----------------------
+
+See https://packaging.python.org/tutorials/packaging-projects/
+
+In a virtualenv, run pip install
+```
+pip install -r requirements/base.txt
+pip install twine
+```
+
+Create a new build:
+```
+python -m build
+```
+
+Publish the new release - you will need the credentials for accessing pypi.org
+```
+twine upload dist/*
+```
+

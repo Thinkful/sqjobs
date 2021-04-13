@@ -3,7 +3,7 @@
 .*.swp
 
 # distutils
-/sqjobs.egg-info/
+/sqjobstf.egg-info/
 /dist/
 /build/
 
