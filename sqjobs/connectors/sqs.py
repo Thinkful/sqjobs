@@ -156,6 +156,7 @@ class SQS(Connector):
             if environment and aws_queues_enabled:
                 # running in the AWS environments
                 name = f'{environment}-{name}'
+                logger.info(f'Using prefixed queue name: {name}')
             return self.connection.get_queue_by_name(QueueName=name)
         except botocore.exceptions.ClientError:
             return None
