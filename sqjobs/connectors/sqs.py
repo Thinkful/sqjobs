@@ -152,7 +152,7 @@ class SQS(Connector):
     def _get_queue(self, name):
         try:
             environment = os.environ.get('ENVIRONMENT', False)
-            aws_queues_enabled = os.environ.get('AWS_SAM_QUEUES', False)
+            aws_queues_enabled = int(os.environ.get('AWS_SAM_QUEUES', 0))
             if environment and aws_queues_enabled:
                 # running in the AWS environments
                 name = f'{environment}-{name}'
