@@ -63,10 +63,10 @@ Releasing a new version
 
 See https://packaging.python.org/tutorials/packaging-projects/
 
-In a virtualenv, run pip install
+In a Python2.7 virtualenv, run pip install
 ```
 pip install -r requirements/base.txt
-pip install twine
+pip install twine build
 ```
 
 Create a new build:
